@@ -22,6 +22,10 @@ pg-up: set-interface
 	@INTERFACE=${INTERFACE} docker-compose up --detach postgres
 	@echo -e "\tPostgreSQL: запущен на ${INTERFACE}:5432 (логин: postgres, пароль: demo)"
 
+example-pg_range-up: pg-up ## Запустить пример с использованием int4range в PostgreSQL
+	@cat ./docker/db/pg_range.sql | \
+		docker-compose exec -T --user=postgres postgres psql -U postgres -d postgres
+
 down: ## Остановить все контейнеры
 	@docker-compose down
 
