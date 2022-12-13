@@ -83,7 +83,7 @@ create table pg_range_d__kvs
 );
 comment on column pg_range_d__kvs.age_experience is 'Возраст-Стаж';
 comment on column pg_range_d__kvs.value is 'Значение КВС';
-create unique index on pg_range_d__kvs using gist(age_experience);
+create index on pg_range_d__kvs using gist(age_experience);
 
 -- #################################
 -- ### Наполнение таблиц данными ###
