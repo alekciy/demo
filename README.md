@@ -9,10 +9,10 @@
 
 В случае запуска в рамках Ubuntu установку docker и docker-compose можно выполнить запуском команд в корневой директории
 репозитория:
-    ```shell
-    make install-docker
-    make install-docker-compose
-    ```
+```shell
+make install-docker
+make install-docker-compose
+```
 
 ## Установка
 - Клонируем репозиторий командой и переходим в него: `git clone git@github.com:alekciy/demo.git && cd demo`.
